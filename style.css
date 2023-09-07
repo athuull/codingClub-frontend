@@ -1,0 +1,125 @@
+/* Reset some default styles */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+    }
+    /* Basic styling */
+    body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #0d1117; /* Dark background */
+    color: #fff; /* White text color */
+    background-size: cover;
+    background-blur: 10px; /* Adjust the blur intensity as needed */
+    color: #fff; /* White text color */
+    backdrop-filter: blur(10px); /* Apply a blur to simulate glass */
+}
+    
+    header {
+    background-color: rgba(0, 0, 0, 0.41); /* Slightly transparent dark header */
+    color: #fff;
+    padding: 10px 0px;
+    display: flex;
+    justify-content: space-between; /* Create space between logo and navigation */
+    align-items: center; /* Center logo and navigation vertically */
+    }
+    .logo {
+    font-weight: bold;
+    font-size: 10px; /* Adjust the font size as needed */
+    margin-left: 20px; /* Add margin to separate the logo from navigation */
+    font-weight: bold;
+    }
+    nav ul {
+    list-style: none;
+    }
+    nav ul li {
+    display: inline;
+    margin-right: 20px;
+    }
+    nav a {
+    text-decoration: none;
+    color: #fff;
+    }
+    section {
+    padding: 20px;
+    }
+    .hero {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Slightly transparent dark background */
+    color: #fff;
+    padding: 60px 0;
+    font-size:30px;
+    border-radius:30px;
+    }
+  /* Style for the "Join Now" button */
+.btn {
+    display: inline-block;
+    padding: 15px 30px; /* Increase padding for a bigger button */
+    background-color: #007bff; /* Blue button background color */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 30px; /* Rounded corners for a more appealing look */
+    margin-top: 20px;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+    font-size: 18px; /* Increase font size for better readability */
+    font-weight: bold; /* Make the text bold */
+}
+
+.btn:hover {
+    background-color: #9200b3; /* Darker blue background on hover */
+    transform: scale(1.05); /* Enlarge the button slightly on hover */
+    cursor: pointer; /* Change cursor to a pointer on hover */
+}
+
+    ul {
+    list-style: none;
+    }
+    ul li {
+    margin-bottom: 10px;
+    }
+    footer {
+    background-color: rgba(0, 0, 0, 0.7); /* Slightly transparent dark footer */
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    }
+    .welcome-message {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50vh; /* Center vertically in the viewport */
+        }
+
+        /* ... (previous CSS code) ... */
+
+/* Style for the login modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background overlay */
+    z-index: 1;
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    width: 50%;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+
