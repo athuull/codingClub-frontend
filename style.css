@@ -122,4 +122,8 @@ body, h1, h2, h3, p, ul, li {
     cursor: pointer;
 }
 
+.logo img{
+    width: 150px;
+    height: auto;
+}
 
