@@ -90,8 +90,6 @@ body, h1, h2, h3, p, ul, li {
         height: 50vh; /* Center vertically in the viewport */
         }
 
-        /* ... (previous CSS code) ... */
-
 /* Style for the login modal */
 .modal {
     display: none;
