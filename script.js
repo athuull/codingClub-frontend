@@ -17,7 +17,6 @@ const cursor = document.getElementById('blinking-cursor');
 const typingText = document.getElementById('typing-text');
 
 // Function for blinking cursor animation
-// Function for blinking cursor animation
 function blinkCursor() {
     const cursor = document.getElementById('blinking-cursor');
     const screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
@@ -28,15 +27,13 @@ function blinkCursor() {
             cursor.style.visibility = (cursor.style.visibility === 'hidden') ? 'visible' : 'hidden';
         }, 500); // Adjust blinking speed as needed (in milliseconds)
     } else {
-        cursor.innerHTML = ''; // Hide cursor content on smaller screens
+        cursor.style.visibility = 'hidden';
     }
 }
-
 
 // Function for typing animation
 function typeWelcomeMessage() {
     const text = "Welcome to the Coding Club.";
-    const typingText = document.getElementById('typing-text');
     let i = 0;
 
     function type() {
@@ -69,7 +66,7 @@ if (screenWidth > 768) {
 // Invoke the typing animation
 typeWelcomeMessage();
 
-// Rest of your code (event listeners, etc.)
+// Event Listeners
 joinNowBtn.addEventListener('click', () => {
     loginModal.style.display = 'block';
 });

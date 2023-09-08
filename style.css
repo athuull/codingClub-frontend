@@ -11,7 +11,6 @@ body {
     color: #fff; /* White text color */
     background-size: cover;
     background-blur: 10px; /* Adjust the blur intensity as needed */
-    color: #fff; /* White text color */
     backdrop-filter: blur(10px); /* Apply a blur to simulate glass */
 }
 
@@ -167,7 +166,12 @@ footer {
     nav a {
         font-size: 14px;
     }
-    header{
+    
+    header {
         padding-right: 0rem;
+    }
+    
+    .welcome-message {
+        display: none; /* Hide the welcome message on smaller screens */
     }
 }
