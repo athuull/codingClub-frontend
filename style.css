@@ -175,3 +175,24 @@ footer {
         display: none; /* Hide the welcome message on smaller screens */
     }
 }
+/* CSS for the About Us, Events, Contact Us, and Members cards */
+/* CSS for the About Us, Events, Contact Us, and Members cards */
+.card {
+    background-color: rgba(0, 0, 0, 0.7); /* Slightly transparent dark background */
+    color: #fff;
+    padding: 40px; /* Increase padding to make the cards taller */
+    border-radius: 20px; /* Rounded corners for a boxy look */
+    margin: 0 20px 20px 20px; /* Match the left and right margins of the hero section */
+    align-items:center;
+    text-align:center;
+}
+
+.card h2 {
+    font-size: 24px; /* Increase font size for larger text */
+    color:rgba(136, 0, 255, 0.633);
+}
+
+.card p {
+    font-size: 18px; /* Increase font size for larger text */
+}
+
