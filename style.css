@@ -56,7 +56,7 @@ section {
     text-align: center;
     background-color: rgba(0, 0, 0, 0.5); /* Slightly transparent dark background */
     color: #fff;
-    padding: 30px 0;
+    padding: 60px 0;
     font-size: 30px;
     border-radius: 30px;
 }
@@ -144,12 +144,12 @@ footer {
 }
 
 /* Media query for screens with a maximum width of 768px (typical for mobile screens) */
+/* Media query for screens with a maximum width of 768px (typical for mobile screens) */
 @media (max-width: 768px) {
     .hero {
-        font-size: 20px;
-        padding: 20px 0;
+        font-size: 18px; /* Decrease font size for smaller screens */
+        padding: 20px 0; /* Decrease padding for top and bottom */
     }
-
     .logo img {
         width: 100px;
         height: auto;
@@ -172,10 +172,19 @@ footer {
     }
     
     .welcome-message {
-        display: none; /* Hide the welcome message on smaller screens */
+        height: 30vh; /* Adjust the height for smaller screens */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .intro-hero {
+        font-size: 24px; /* Adjust font size for smaller screens */
     }
 }
-/* CSS for the About Us, Events, Contact Us, and Members cards */
+
+
 /* CSS for the About Us, Events, Contact Us, and Members cards */
 .card {
     background-color: rgba(0, 0, 0, 0.7); /* Slightly transparent dark background */
@@ -183,7 +192,6 @@ footer {
     padding: 40px; /* Increase padding to make the cards taller */
     border-radius: 20px; /* Rounded corners for a boxy look */
     margin: 0 20px 20px 20px; /* Match the left and right margins of the hero section */
-    align-items:center;
     text-align:center;
 }
 
@@ -196,3 +204,4 @@ footer {
     font-size: 18px; /* Increase font size for larger text */
 }
 
+/*

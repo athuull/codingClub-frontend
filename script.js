@@ -12,28 +12,23 @@ const eventsBtn = document.querySelector('.eventsNav');
 const eventsSec = document.getElementById('events');
 const membersBtn = document.querySelector('.membersNav');
 const membersSec = document.getElementById('members');
-
 const cursor = document.getElementById('blinking-cursor');
 const typingText = document.getElementById('typing-text');
 
 // Function for blinking cursor animation
 function blinkCursor() {
     const cursor = document.getElementById('blinking-cursor');
-    const screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+    cursor.innerHTML = '<span>|</span>'; // Show cursor
 
-    if (screenWidth > 768) {
-        cursor.innerHTML = '<span>|</span>'; // Show cursor on larger screens
-        setInterval(function () {
-            cursor.style.visibility = (cursor.style.visibility === 'hidden') ? 'visible' : 'hidden';
-        }, 500); // Adjust blinking speed as needed (in milliseconds)
-    } else {
-        cursor.style.visibility = 'hidden';
-    }
+    setInterval(function () {
+        cursor.style.visibility = (cursor.style.visibility === 'hidden') ? 'visible' : 'hidden';
+    }, 500); // Adjust blinking speed as needed (in milliseconds)
 }
 
 // Function for typing animation
 function typeWelcomeMessage() {
     const text = "Welcome to the Coding Club.";
+    const typingText = document.getElementById('typing-text');
     let i = 0;
 
     function type() {
@@ -57,16 +52,10 @@ function typeWelcomeMessage() {
     type();
 }
 
-// Check screen width and conditionally call the blinking cursor function
-const screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-if (screenWidth > 768) {
-    blinkCursor();
-}
-
 // Invoke the typing animation
 typeWelcomeMessage();
 
-// Event Listeners
+// Rest of your code (event listeners, etc.)
 joinNowBtn.addEventListener('click', () => {
     loginModal.style.display = 'block';
 });
