@@ -6,16 +6,17 @@ body, h1, h2, h3, p, ul, li {
 
 /* Basic styling */
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Open Sans' , sans-serif;
     background-color: #0d1117; /* Dark background */
     color: #fff; /* White text color */
     background-size: cover;
-    background-blur: 10px; /* Adjust the blur intensity as needed */
+    background-blur: 50px; /* Adjust the blur intensity as needed */
     backdrop-filter: blur(10px); /* Apply a blur to simulate glass */
+    /* background-image: url("pexels-veeterzy-114979.jpg"); */
 }
 
 header {
-    background-color: rgba(0, 0, 0, 0.41); /* Slightly transparent dark header */
+    background-color: rgba(0, 0, 0, 0.715); /* Slightly transparent dark header */
     color: #fff;
     padding: 10px 20px;
     display: flex;
@@ -54,7 +55,7 @@ section {
 
 .hero {
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.5); /* Slightly transparent dark background */
+    background-color: rgba(0, 0, 0, 0.715); /* Slightly transparent dark background */
     color: #fff;
     padding: 60px 0;
     font-size: 30px;
@@ -62,23 +63,26 @@ section {
 }
 
 /* Style for the "Join Now" button */
+/* Updated style for the "Join Now" button with a custom color */
 .btn {
     display: inline-block;
-    padding: 15px 30px; /* Increase padding for a bigger button */
-    background-color: #007bff; /* Blue button background color */
+    padding: 15px 30px;
+    background-color: #6020d7; /* Custom button background color */
     color: #fff;
     text-decoration: none;
-    border-radius: 30px; /* Rounded corners for a more appealing look */
+    border-radius: 30px;
     margin-top: 20px;
     transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
-    font-size: 18px; /* Increase font size for better readability */
-    font-weight: bold; /* Make the text bold */
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    box-shadow: none;
 }
 
 .btn:hover {
-    background-color: #9200b3; /* Darker blue background on hover */
-    transform: scale(1.05); /* Enlarge the button slightly on hover */
-    cursor: pointer; /* Change cursor to a pointer on hover */
+    background-color: #490db9; /* Darker color on hover */
+    transform: scale(1.05);
+    cursor: pointer;
 }
 
 ul {
@@ -90,7 +94,7 @@ ul li {
 }
 
 footer {
-    background-color: rgba(0, 0, 0, 0.7); /* Slightly transparent dark footer */
+    background-color: rgba(0, 0, 0, 715); /* Slightly transparent dark footer */
     color: #fff;
     text-align: center;
     padding: 10px 0;
