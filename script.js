@@ -18,7 +18,7 @@ window.onload = function () {
     const typingText = document.getElementById('typing-text');
 
     let i = 0;
-    
+
     function type() {
         if (i <= text.length) {
             const char = text.charAt(i);
@@ -32,19 +32,21 @@ window.onload = function () {
                 typingText.appendChild(charSpan);
             }
             i++;
-            // Ensure cursor is always at the end
-            cursor.style.visibility = 'visible';
             setTimeout(type, 50); // Adjust typing speed as needed (in milliseconds)
         }
     }
 
-    // Start the typing animation when the page loads
-    type();
+    // Check screen width and decide whether to show the blinking cursor
+    const screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+    if (screenWidth > 768) {
+        // Only add the blinking cursor on screens wider than 768px
+        type();
 
-    // Start the blinking cursor animation
-    setInterval(function () {
-        cursor.style.visibility = (cursor.style.visibility === 'hidden') ? 'visible' : 'hidden';
-    }, 500); // Adjust blinking speed as needed (in milliseconds)
+        // Start the blinking cursor animation
+        setInterval(function () {
+            cursor.style.visibility = (cursor.style.visibility === 'hidden') ? 'visible' : 'hidden';
+        }, 500); // Adjust blinking speed as needed (in milliseconds)
+    }
 };
 
 // JavaScript for opening and closing the login modal
