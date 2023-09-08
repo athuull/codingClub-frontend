@@ -2,9 +2,10 @@
 body, h1, h2, h3, p, ul, li {
     margin: 0;
     padding: 0;
-    }
-    /* Basic styling */
-    body {
+}
+
+/* Basic styling */
+body {
     font-family: 'Open Sans', sans-serif;
     background-color: #0d1117; /* Dark background */
     color: #fff; /* White text color */
@@ -13,47 +14,55 @@ body, h1, h2, h3, p, ul, li {
     color: #fff; /* White text color */
     backdrop-filter: blur(10px); /* Apply a blur to simulate glass */
 }
-    
-    header {
+
+header {
     background-color: rgba(0, 0, 0, 0.41); /* Slightly transparent dark header */
     color: #fff;
-    padding: 10px 0px;
+    padding: 10px 20px;
     display: flex;
     justify-content: space-between; /* Create space between logo and navigation */
     align-items: center; /* Center logo and navigation vertically */
-    }
-    .logo {
+}
+
+.logo {
     font-weight: bold;
     font-size: 10px; /* Adjust the font size as needed */
-    margin-left: 20px; /* Add margin to separate the logo from navigation */
+    margin-left: 20px;
     font-weight: bold;
-    }
-    nav ul {
+}
+
+nav ul {
     list-style: none;
-    }
-    nav ul li {
+}
+
+nav ul li {
     display: inline;
     margin-right: 20px;
-    }
-    nav a {
+}
+
+nav a {
     text-decoration: none;
     color: #fff;
-    }
-    nav a:hover {
-        color:#6020d7
-    }
-    section {
+}
+
+nav a:hover {
+    color: #6020d7;
+}
+
+section {
     padding: 20px;
-    }
-    .hero {
+}
+
+.hero {
     text-align: center;
     background-color: rgba(0, 0, 0, 0.5); /* Slightly transparent dark background */
     color: #fff;
     padding: 30px 0;
-    font-size:30px;
-    border-radius:30px;
-    }
-  /* Style for the "Join Now" button */
+    font-size: 30px;
+    border-radius: 30px;
+}
+
+/* Style for the "Join Now" button */
 .btn {
     display: inline-block;
     padding: 15px 30px; /* Increase padding for a bigger button */
@@ -73,25 +82,28 @@ body, h1, h2, h3, p, ul, li {
     cursor: pointer; /* Change cursor to a pointer on hover */
 }
 
-    ul {
+ul {
     list-style: none;
-    }
-    ul li {
+}
+
+ul li {
     margin-bottom: 10px;
-    }
-    footer {
+}
+
+footer {
     background-color: rgba(0, 0, 0, 0.7); /* Slightly transparent dark footer */
     color: #fff;
     text-align: center;
     padding: 10px 0;
-    }
-    .welcome-message {
-        text-align: center;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 50vh; /* Center vertically in the viewport */
-        }
+}
+
+.welcome-message {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh; /* Center vertically in the viewport */
+}
 
 /* Style for the login modal */
 .modal {
@@ -123,12 +135,39 @@ body, h1, h2, h3, p, ul, li {
     cursor: pointer;
 }
 
-.logo img{
+.logo img {
     width: 150px;
     height: auto;
 }
 
-.intro-hero{
+.intro-hero {
     font-size: 30px;
-    
+}
+
+/* Media query for screens with a maximum width of 768px (typical for mobile screens) */
+@media (max-width: 768px) {
+    .hero {
+        font-size: 20px;
+        padding: 20px 0;
+    }
+
+    .logo img {
+        width: 100px;
+        height: auto;
+    }
+
+    nav ul {
+        justify-content: flex-end;
+    }
+
+    nav ul li {
+        margin-left: 10px;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+    header{
+        padding-right: 0rem;
+    }
 }
