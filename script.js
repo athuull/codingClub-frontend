@@ -1,5 +1,6 @@
 'use strict';
 
+// Variables
 const joinNowBtn = document.getElementById('join-now-btn');
 const loginModal = document.getElementById('login-modal');
 const closeModal = document.getElementById('close-modal');
@@ -12,11 +13,30 @@ const eventsSec = document.getElementById('events');
 const membersBtn = document.querySelector('.membersNav');
 const membersSec = document.getElementById('members');
 
-window.onload = function () {
-    const text = "Welcome to the Coding Club.";
-    const cursor = document.getElementById('blinking-cursor');
-    const typingText = document.getElementById('typing-text');
+const cursor = document.getElementById('blinking-cursor');
+const typingText = document.getElementById('typing-text');
 
+// Function for blinking cursor animation
+// Function for blinking cursor animation
+function blinkCursor() {
+    const cursor = document.getElementById('blinking-cursor');
+    const screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+
+    if (screenWidth > 768) {
+        cursor.innerHTML = '<span>|</span>'; // Show cursor on larger screens
+        setInterval(function () {
+            cursor.style.visibility = (cursor.style.visibility === 'hidden') ? 'visible' : 'hidden';
+        }, 500); // Adjust blinking speed as needed (in milliseconds)
+    } else {
+        cursor.innerHTML = ''; // Hide cursor content on smaller screens
+    }
+}
+
+
+// Function for typing animation
+function typeWelcomeMessage() {
+    const text = "Welcome to the Coding Club.";
+    const typingText = document.getElementById('typing-text');
     let i = 0;
 
     function type() {
@@ -36,21 +56,20 @@ window.onload = function () {
         }
     }
 
-    // Check screen width and decide whether to show the blinking cursor
-    const screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-    if (screenWidth > 768) {
-        // Only add the blinking cursor on screens wider than 768px
-        type();
+    // Start typing animation
+    type();
+}
 
-        // Start the blinking cursor animation
-        setInterval(function () {
-            cursor.style.visibility = (cursor.style.visibility === 'hidden') ? 'visible' : 'hidden';
-        }, 500); // Adjust blinking speed as needed (in milliseconds)
-    }
-};
+// Check screen width and conditionally call the blinking cursor function
+const screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+if (screenWidth > 768) {
+    blinkCursor();
+}
 
-// JavaScript for opening and closing the login modal
+// Invoke the typing animation
+typeWelcomeMessage();
 
+// Rest of your code (event listeners, etc.)
 joinNowBtn.addEventListener('click', () => {
     loginModal.style.display = 'block';
 });
@@ -80,3 +99,5 @@ membersBtn.addEventListener('click', function () {
 eventsBtn.addEventListener('click', function () {
     eventsSec.scrollIntoView({ behavior: "smooth" });
 });
+
+// Add more event listeners and code as needed
