@@ -86,4 +86,32 @@ eventsBtn.addEventListener('click', function () {
     eventsSec.scrollIntoView({ behavior: "smooth" });
 });
 
+// Function to check if an element is in the viewport
+function isInViewport(element) {
+    const rect = element.getBoundingClientRect();
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+}
+
+// Function to handle scroll events and trigger animations
+function handleScroll() {
+    const cardElements = document.querySelectorAll('.fade-in-left');
+    cardElements.forEach((card) => {
+        if (isInViewport(card)) {
+            card.classList.add('fade-in-visible');
+        }
+    });
+}
+
+// Attach the scroll event listener
+window.addEventListener('scroll', handleScroll);
+
+// Trigger initial check in case some cards are already in the viewport
+handleScroll();
+
+
 // Add more event listeners and code as needed

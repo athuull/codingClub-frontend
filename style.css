@@ -203,5 +203,14 @@ footer {
 .card p {
     font-size: 18px; /* Increase font size for larger text */
 }
+/* CSS for fade-in animation */
+.fade-in-left {
+    opacity: 0;
+    transform: translateX(-20px); /* Start off-screen to the left */
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
 
-/*
+.fade-in-left.fade-in-visible {
+    opacity: 1;
+    transform: translateX(0); /* Move to the original position */
+}
