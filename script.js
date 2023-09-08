@@ -2,6 +2,16 @@
 const joinNowBtn = document.getElementById('join-now-btn');
 const loginModal = document.getElementById('login-modal');
 const closeModal = document.getElementById('close-modal');
+const aboutBtn = document.querySelector('.aboutNav');
+const aboutSec = document.getElementById('about');
+const contactBtn = document.querySelector('.contactNav');
+const contactSec = document.getElementById('contact');
+const eventsBtn = document.querySelector('.eventsNav');
+const eventsSec = document.getElementById('events');
+const membersBtn = document.querySelector('.membersNav');
+const membersSec = document.getElementById('members');
+
+
 window.onload = function () {
     const text = "Welcome to the Coding Club.";
     const cursor = document.getElementById('blinking-cursor');
@@ -12,7 +22,7 @@ window.onload = function () {
     if (i < text.length) {
     typingText.textContent += text.charAt(i);
     i++;
-    setTimeout(type, 100); // Adjust typing speed as needed (in milliseconds)
+    setTimeout(type, 50); // Adjust typing speed as needed (in milliseconds)
     }
     }
     // Start the typing animation when the page loads
@@ -38,3 +48,23 @@ window.addEventListener('click', (event) => {
         loginModal.style.display = 'none';
     }
 });
+aboutBtn.addEventListener('click' , function(){
+    aboutSec.scrollIntoView({behavior:"smooth"})
+
+}); 
+
+contactBtn.addEventListener('click' , function(){
+    contactSec.scrollIntoView({behavior:"smooth"})
+
+}); 
+
+membersBtn.addEventListener('click' , function(){
+    membersSec.scrollIntoView({behavior:"smooth"})
+
+}); 
+eventsBtn.addEventListener('click' , function(){
+eventsSec.scrollIntoView({behavior:"smooth"})
+
+}); 
+
+
