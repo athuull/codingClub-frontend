@@ -25,6 +25,7 @@
 <li><a class="contactNav">Contact</a></li>
 </ul>
 </nav>
+<button id="logoutBtn" class="btn btn-small hidden">Logout</button>
 </header>
 <section id="home">
 <div class="hero">
@@ -35,22 +36,42 @@
 <p class = "intro-hero">Explore, Learn, and Code with Us!</p>
 <button id="join-now-btn" class="btn">Join Now</button>
 
+<!-- ... (previous HTML code) ... -->
+
 <div id="login-modal" class="modal">
     <div class="modal-content">
         <span class="close" id="close-modal">&times;</span>
-        <h2>Login</h2>
-        <form>
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username" required>
-            <br>
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required>
-            <br>
-            <button type="submit">Login</button>
-        </form>
-        <p>Don't have an account? <a href="#">Sign up</a></p>
+        <div id="existing-users-form" class="tab-content">
+            <h2>Login</h2>
+            <form class="login">
+                <label for="email">Email:</label>
+                <input type="text" id="email" name="email" required>
+                <br>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <br>
+                <button type="submit" class="btn btn-small loginBtn">Login</button>
+            </form>
+        </div>
+        <div id="new-users-form">
+            <h2>Sign Up</h2>
+            <form>
+                <label for="new-email">New Email:</label>
+                <input type="text" id="new-email" name="new-email" required>
+                <br>
+                <label for="new-password">New Password:</label>
+                <input type="password" id="new-password" name="new-password" required>
+                <br>
+                <button type="submit" class="btn btn-small">Sign Up</button>
+            </form>
+        </div>
     </div>
 </div>
+
+<!-- ... (remaining HTML code) ... -->
+
+
+
 
 </div>
 </section>
@@ -103,6 +124,7 @@ href="mailto:xyz@gmail.com">codingclub@rajagiriviswajyothi.org</a>.</p>
 <footer>
 <p>&copy; 2023 Coding Club - RVCAS</p>
 </footer>
-<script src ="script.js"></script>
+
+<script src ="dist/bundle.js"></script>
 </body>
 </html>
