@@ -10,9 +10,9 @@ body {
     background-color: #0d1117; /* Dark background */
     color: #fff; /* White text color */
     background-size: cover;
-    background-blur: 50px; /* Adjust the blur intensity as needed */
+    background-blur: 10px /* Adjust the blur intensity as needed */
     backdrop-filter: blur(10px); /* Apply a blur to simulate glass */
-    /* background-image: url("pexels-veeterzy-114979.jpg"); */
+    /* background-image: url("background.jpg"); */
 }
 
 header {
@@ -121,13 +121,15 @@ footer {
 }
 
 .modal-content {
-    background-color: #fff;
+    background-color: #252424;
     margin: 15% auto;
     padding: 20px;
     width: 50%;
     border-radius: 5px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     position: relative;
+    border-radius:30px;
+    
 }
 
 .close {
@@ -218,3 +220,4 @@ footer {
     opacity: 1;
     transform: translateX(0); /* Move to the original position */
 }
+
