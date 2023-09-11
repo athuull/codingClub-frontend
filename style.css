@@ -294,3 +294,17 @@ footer {
 .mainContent li{
     font-size: 20px;
 }
+/* Default styles for larger screens */
+.video-container {
+    text-align: center;
+}
+
+/* Media query for screens with a maximum width of 768px (typical for small screens) */
+@media (max-width: 768px) {
+    .video-container {
+        display: flex;
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Center vertically */
+    }
+}
+

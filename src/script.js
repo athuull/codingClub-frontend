@@ -125,14 +125,7 @@ function handleScroll() {
         }
     });
 }
-function handleScrollMain() {
-    const cardElements = document.querySelectorAll('.fade-in-left');
-    cardElements.forEach((card) => {
-        if (isInViewport(card)) {
-            card.classList.add('fade-in-visible');
-        }
-    });
-}
+
 
 // Attach the scroll event listener
 window.addEventListener('scroll', handleScroll);
