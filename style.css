@@ -260,3 +260,37 @@ footer {
 .hidden{
     display:none
 }
+.resources{
+    overflow:hidden;
+}
+
+.modalAlerts{
+    color:red;
+    font-size: 1.5rem;
+}
+
+/* Styling for the Getting Started, Bi-weekly Updates, and Community Interaction sections */
+.mainContent{
+    background-color: rgba(0, 0, 0, 0.7); /* Slightly transparent dark background */
+    color: #fff;
+    padding: 40px;
+    border-radius: 20px;
+    margin: 20px;
+    text-align: left;
+    position: relative; /* Add relative positioning for animations */
+    overflow: hidden; /* Hide content that overflows */
+    font-size: large;
+  
+}
+
+
+.mainContent h2 {
+    font-size: 30px; /* Increase font size for larger text */
+    color: rgba(136, 0, 255, 0.633);
+}
+.mainContent p{
+    font-size: 25px;
+}
+.mainContent li{
+    font-size: 20px;
+}

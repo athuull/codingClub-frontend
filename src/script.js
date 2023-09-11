@@ -1,6 +1,5 @@
 'use strict';
 
-import { on } from 'events';
 import {initializeApp} from 'firebase/app'
 import {getAuth , createUserWithEmailAndPassword,signOut,signInWithEmailAndPassword , onAuthStateChanged} from 'firebase/auth'
 
@@ -31,7 +30,9 @@ const membersBtn = document.querySelector('.membersNav');
 const membersSec = document.getElementById('members');
 const cursor = document.getElementById('blinking-cursor');
 const typingText = document.getElementById('typing-text');
-const alertText = document.querySelector('alertText');
+const alertEmail = document.querySelector('.alertEmail');
+const alertPassword = document.querySelector('.alertPassword');
+const alertNewEmail = document.querySelector('.alertNewEmail');
 
 // Function for blinking cursor animation
 function blinkCursor() {
@@ -41,18 +42,6 @@ function blinkCursor() {
     setInterval(function () {
         cursor.style.visibility = (cursor.style.visibility === 'hidden') ? 'visible' : 'hidden';
     }, 500); // Adjust blinking speed as needed (in milliseconds)
-}
-function displayErrorMessage(errorMessage, elementId) {
-    const errorElement = document.getElementById(elementId);
-    errorElement.textContent = errorMessage;
-    errorElement.style.display = 'block'; // Show the error message
-}
-
-// Function to clear error messages
-function clearErrorMessage(elementId) {
-    const errorElement = document.getElementById(elementId);
-    errorElement.textContent = '';
-    errorElement.style.display = 'none'; // Hide the error message
 }
 
 // Function for typing animation
@@ -136,6 +125,14 @@ function handleScroll() {
         }
     });
 }
+function handleScrollMain() {
+    const cardElements = document.querySelectorAll('.fade-in-left');
+    cardElements.forEach((card) => {
+        if (isInViewport(card)) {
+            card.classList.add('fade-in-visible');
+        }
+    });
+}
 
 // Attach the scroll event listener
 window.addEventListener('scroll', handleScroll);
@@ -151,6 +148,7 @@ signupForm.addEventListener('submit', (e) => {
 
     const email = signupForm.querySelector('#new-email').value; // Corrected ID
     const password = signupForm.querySelector('#new-password').value; // Corrected ID
+    alertNewEmail.classList.add('hidden');
 
     createUserWithEmailAndPassword(auth, email, password)
     .then((cred) => { 
@@ -158,7 +156,12 @@ signupForm.addEventListener('submit', (e) => {
         signupForm.reset();
     })
     .catch((err) => {
-        console.log(err.message)
+        let errorMessage=err.code;
+        console.log(errorMessage)
+        if(errorMessage==='auth/invalid-email'){
+            alertNewEmail.classList.remove('hidden');
+            
+        }
     });
 });
 
@@ -170,7 +173,9 @@ logoutButton.addEventListener('click' , () => {
         window.location.reload();
     })
     .catch((err) => {
-        console.log(err.message);
+        let errorMessage = err.code;
+        console.log(errorMessage);
+
     })
  
 
@@ -181,6 +186,8 @@ loginForm.addEventListener('submit', (e) => {
 
     const email = loginForm.querySelector('#email').value;
     const password = loginForm.querySelector('#password').value;
+    alertEmail.classList.add('hidden');
+    alertPassword.classList.add('hidden');
 
     signInWithEmailAndPassword(auth, email, password)
         .then((cred) => {
@@ -188,7 +195,16 @@ loginForm.addEventListener('submit', (e) => {
             
         })
         .catch((err) => {
-            console.log('Login error:', err.message); // Log any error messages
+            let errorMessage=err.code; // Log any error messages
+            console.log(errorMessage);
+            if(errorMessage==='auth/invalid-email'){
+                alertEmail.classList.remove('hidden');
+
+            }
+            else if(errorMessage==='auth/invalid-login-credentials'){
+                alertPassword.classList.remove('hidden');
+            }
+            
         
           
         });
