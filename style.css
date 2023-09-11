@@ -41,6 +41,7 @@ nav ul li {
 nav a {
     text-decoration: none;
     color: #fff;
+     ;
 }
 
 nav a:hover {
@@ -58,6 +59,7 @@ section {
     padding: 60px 0;
     font-size: 30px;
     border-radius: 30px;
+    
 }
 
 /* Style for the "Join Now" button */
@@ -104,6 +106,7 @@ footer {
     justify-content: center;
     align-items: center;
     height: 50vh; /* Center vertically in the viewport */
+    pointer-events: none;
 }
 
 /* Style for the login modal */

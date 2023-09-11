@@ -31,6 +31,7 @@ const membersBtn = document.querySelector('.membersNav');
 const membersSec = document.getElementById('members');
 const cursor = document.getElementById('blinking-cursor');
 const typingText = document.getElementById('typing-text');
+const alertText = document.querySelector('alertText');
 
 // Function for blinking cursor animation
 function blinkCursor() {
@@ -40,6 +41,18 @@ function blinkCursor() {
     setInterval(function () {
         cursor.style.visibility = (cursor.style.visibility === 'hidden') ? 'visible' : 'hidden';
     }, 500); // Adjust blinking speed as needed (in milliseconds)
+}
+function displayErrorMessage(errorMessage, elementId) {
+    const errorElement = document.getElementById(elementId);
+    errorElement.textContent = errorMessage;
+    errorElement.style.display = 'block'; // Show the error message
+}
+
+// Function to clear error messages
+function clearErrorMessage(elementId) {
+    const errorElement = document.getElementById(elementId);
+    errorElement.textContent = '';
+    errorElement.style.display = 'none'; // Hide the error message
 }
 
 // Function for typing animation
@@ -157,7 +170,7 @@ logoutButton.addEventListener('click' , () => {
         window.location.reload();
     })
     .catch((err) => {
-        console.log(err.message)
+        console.log(err.message);
     })
  
 
@@ -172,9 +185,12 @@ loginForm.addEventListener('submit', (e) => {
     signInWithEmailAndPassword(auth, email, password)
         .then((cred) => {
             console.log('the user logged in:', cred.user); // Log user details
+            
         })
         .catch((err) => {
             console.log('Login error:', err.message); // Log any error messages
+        
+          
         });
 });
 
@@ -190,3 +206,4 @@ onAuthStateChanged(auth ,(user) => {
 
     }
 })
+
