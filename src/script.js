@@ -35,44 +35,43 @@ const alertPassword = document.querySelector('.alertPassword');
 const alertNewEmail = document.querySelector('.alertNewEmail');
 
 // Function for blinking cursor animation
-function blinkCursor() {
-    const cursor = document.getElementById('blinking-cursor');
-    cursor.innerHTML = '<span>|</span>'; // Show cursor
+// function blinkCursor() {
+//     const cursor = document.getElementById('blinking-cursor');
+//     cursor.innerHTML = '<span>|</span>'; // Show cursor
 
-    setInterval(function () {
-        cursor.style.visibility = (cursor.style.visibility === 'hidden') ? 'visible' : 'hidden';
-    }, 500); // Adjust blinking speed as needed (in milliseconds)
-}
+//     setInterval(function () {
+//         cursor.style.visibility = (cursor.style.visibility === 'hidden') ? 'visible' : 'hidden';
+//     }, 500); // Adjust blinking speed as needed (in milliseconds)
+// }
 
 // Function for typing animation
-function typeWelcomeMessage() {
-    const text = "Welcome to the Coding Club.";
-    const typingText = document.getElementById('typing-text');
-    let i = 0;
+// function typeWelcomeMessage() {
+//     const text = "Welcome to the Coding Club.";
+//     const typingText = document.getElementById('typing-text');
+//     let i = 0;
 
-    function type() {
-        if (i <= text.length) {
-            const char = text.charAt(i);
-            if (char === '\n') {
-                // Create a <br> element for a new line
-                typingText.appendChild(document.createElement('br'));
-            } else {
-                // Create a <span> element for each character to keep cursor with it
-                const charSpan = document.createElement('span');
-                charSpan.textContent = char;
-                typingText.appendChild(charSpan);
-            }
-            i++;
-            setTimeout(type, 50); // Adjust typing speed as needed (in milliseconds)
-        }
-    }
+//     function type() {
+//         if (i <= text.length) {
+//             const char = text.charAt(i);
+//             if (char === '\n') {
+//                 // Create a <br> element for a new line
+//                 typingText.appendChild(document.createElement('br'));
+//             } else {
+//                 // Create a <span> element for each character to keep cursor with it
+//                 const charSpan = document.createElement('span');
+//                 charSpan.textContent = char;
+//                 typingText.appendChild(charSpan);
+//             }
+//             i++;
+//             setTimeout(type, 50); // Adjust typing speed as needed (in milliseconds)
+//         }
+//     }
 
-    // Start typing animation
-    type();
-}
+//     // Start typing animation
+//     type();
+// }
 
 // Invoke the typing animation
-typeWelcomeMessage();
 
 // Rest of your code (event listeners, etc.)
 joinNowBtn.addEventListener('click', () => {
