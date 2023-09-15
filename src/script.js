@@ -30,30 +30,33 @@ const contactBtn = document.querySelector('.contactNav');
 const contactSec = document.getElementById('contact');
 const eventsBtn = document.querySelector('.eventsNav');
 const eventsSec = document.getElementById('events');
-const membersBtn = document.querySelector('.membersNav');
-const membersSec = document.getElementById('members');
 // const cursor = document.getElementById('blinking-cursor');
 // const typingText = document.getElementById('typing-text');
 const alertEmail = document.querySelector('.alertEmail');
 const alertPassword = document.querySelector('.alertPassword');
 const alertNewEmail = document.querySelector('.alertNewEmail');
 const modalContent  = document.querySelector('.modal-content');
+const libraryNav = document.querySelector('.resourcesNav');
 
 
+
+// Rest of your code (event listeners, etc.)
 joinNowBtn.addEventListener('click', () => {
     loginModal.style.display = 'block';
+ // Apply the animation class to the modal content
 });
 
-
+// Close the modal with scaling animation
 closeModal.addEventListener('click', () => {
     loginModal.style.display = 'none';
- 
+ // Remove the animation class from the modal content
 });
 
 // Close the modal when clicking outside
 window.addEventListener('click', (event) => {
     if (event.target === loginModal) {
         loginModal.style.display = 'none';
+  // Remove the animation class from the modal content
     }
 });
 aboutBtn.addEventListener('click', function () {
@@ -62,10 +65,6 @@ aboutBtn.addEventListener('click', function () {
 
 contactBtn.addEventListener('click', function () {
     contactSec.scrollIntoView({ behavior: "smooth" });
-});
-
-membersBtn.addEventListener('click', function () {
-    membersSec.scrollIntoView({ behavior: "smooth" });
 });
 
 eventsBtn.addEventListener('click', function () {
@@ -177,6 +176,7 @@ onAuthStateChanged(auth ,(user) => {
         joinNowBtn.classList.add('hidden');
         logoutButton.classList.remove('hidden');
         loginModal.style.display = 'none';
+        libraryNav.classList.remove('hidden');
 
         
         
