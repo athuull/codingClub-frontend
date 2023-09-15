@@ -452,3 +452,21 @@ footer {
     font-weight: bold; /* Make subject names bold */
     margin-top: 10px; /* Add some spacing between subjects */
 }
+
+@media (max-width: 768px) {
+    .module-list .modules {
+        font-weight: normal; /* Remove bold for modules */
+        margin-top: 5px; /* Add some spacing between modules */
+        font-size: 18px;
+    }
+    .subject-list {
+        list-style-type: none;
+        padding-left: 0; /* Remove default padding */
+    }
+    
+    .subject-list li {
+        font-weight: bold; /* Make subject names bold */
+        margin-top: 10px;
+        font-size: 20px;
+    }
+}
