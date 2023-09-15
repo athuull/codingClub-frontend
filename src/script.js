@@ -37,6 +37,7 @@ const membersSec = document.getElementById('members');
 const alertEmail = document.querySelector('.alertEmail');
 const alertPassword = document.querySelector('.alertPassword');
 const alertNewEmail = document.querySelector('.alertNewEmail');
+const modalContent  = document.querySelector('.modal-content');
 
 // Function for blinking cursor animation
 // function blinkCursor() {
@@ -79,18 +80,22 @@ const alertNewEmail = document.querySelector('.alertNewEmail');
 // Rest of your code (event listeners, etc.)
 joinNowBtn.addEventListener('click', () => {
     loginModal.style.display = 'block';
+ // Apply the animation class to the modal content
 });
 
+// Close the modal with scaling animation
 closeModal.addEventListener('click', () => {
     loginModal.style.display = 'none';
+ // Remove the animation class from the modal content
 });
 
+// Close the modal when clicking outside
 window.addEventListener('click', (event) => {
     if (event.target === loginModal) {
         loginModal.style.display = 'none';
+  // Remove the animation class from the modal content
     }
 });
-
 aboutBtn.addEventListener('click', function () {
     aboutSec.scrollIntoView({ behavior: "smooth" });
 });
