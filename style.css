@@ -186,8 +186,6 @@ footer {
     }
 
 
-/* Media query for screens with a maximum width of 768px (typical for mobile screens) */
-/* Media query for screens with a maximum width of 768px (typical for mobile screens) */
 @media (max-width: 768px) {
     .hero {
         font-size: 18px; /* Decrease font size for smaller screens */
@@ -393,5 +391,64 @@ footer {
     }
 }
 
+.headingNotes {
+    text-align: center;
+}
 
+/* Add margin to the left of "Semester 1" */
+#semester {
+    margin-left: 20px;
+}
 
+/* Style for the subjects list */
+#semester ul {
+    list-style: none;
+}
+
+.notesContainer {
+    margin-bottom: 10px;
+    text-align: left;
+    gap: 10px;
+    padding:20px;
+}
+
+.headingNotes h1{
+    text-align: center;
+    color: #6020d7;
+    font-size: 30px;
+    
+}
+
+#semester h2{
+    color:#fff;
+    text-align: left;
+    font-size: 24px;
+}
+
+#library-header{
+    margin-bottom: 20px;
+}
+
+.notesContainer ul li {
+    font-size: 25px;
+    margin: 10px;
+}
+
+.module-list {
+    list-style-type: none;
+    padding-left: 20px; /* Adjust the indentation as needed */
+}
+
+.module-list .modules {
+    font-weight: normal; /* Remove bold for modules */
+    margin-top: 5px; /* Add some spacing between modules */
+}
+.subject-list {
+    list-style-type: none;
+    padding-left: 0; /* Remove default padding */
+}
+
+.subject-list li {
+    font-weight: bold; /* Make subject names bold */
+    margin-top: 10px; /* Add some spacing between subjects */
+}
