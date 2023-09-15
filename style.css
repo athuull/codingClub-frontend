@@ -239,7 +239,7 @@ footer {
 }
 
 .card h2 {
-    font-size: 24px; /* Increase font size for larger text */
+    font-size: 30px; /* Increase font size for larger text */
     color:rgba(136, 0, 255, 0.633);
 }
 
@@ -364,3 +364,43 @@ footer {
     width: auto;
     height: auto;
 }
+
+
+
+/* Existing CSS styles */
+
+/* New styles for alignment and spacing */
+.event-details {
+    text-align: center;
+    margin: 20px 0;
+}
+.event-details h2{
+    text-align: center;
+}
+
+.event-details h3 {
+    font-size: 24px;
+    text-align: left;
+}
+
+.image-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three columns per row */
+    gap: 20px; /* Adjust spacing between images */
+    justify-content: center; /* Center images horizontally */
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #000000;
+    border-radius: 5px;
+}
+
+/* Existing CSS styles */
+
+#gallery-header {
+    margin-bottom: 20px;
+}
+
+

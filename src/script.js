@@ -28,8 +28,8 @@ const eventsBtn = document.querySelector('.eventsNav');
 const eventsSec = document.getElementById('events');
 const membersBtn = document.querySelector('.membersNav');
 const membersSec = document.getElementById('members');
-const cursor = document.getElementById('blinking-cursor');
-const typingText = document.getElementById('typing-text');
+// const cursor = document.getElementById('blinking-cursor');
+// const typingText = document.getElementById('typing-text');
 const alertEmail = document.querySelector('.alertEmail');
 const alertPassword = document.querySelector('.alertPassword');
 const alertNewEmail = document.querySelector('.alertNewEmail');
@@ -104,6 +104,9 @@ eventsBtn.addEventListener('click', function () {
     eventsSec.scrollIntoView({ behavior: "smooth" });
 });
 
+window.onload = function() {
+    window.scrollTo(0, 0);
+};
 // Function to check if an element is in the viewport
 function isInViewport(element) {
     const rect = element.getBoundingClientRect();
@@ -214,4 +217,3 @@ onAuthStateChanged(auth ,(user) => {
 
     }
 })
-
