@@ -16,6 +16,10 @@ const firebaseConfig = {
 initializeApp(firebaseConfig);
 
 const auth = getAuth();
+
+document.addEventListener('DOMContentLoaded', function() {
+    window.scrollTo(0, 0);
+});
 // Variables
 const joinNowBtn = document.getElementById('join-now-btn');
 const loginModal = document.getElementById('login-modal');
@@ -71,7 +75,6 @@ const alertNewEmail = document.querySelector('.alertNewEmail');
 //     type();
 // }
 
-// Invoke the typing animation
 
 // Rest of your code (event listeners, etc.)
 joinNowBtn.addEventListener('click', () => {
@@ -104,9 +107,7 @@ eventsBtn.addEventListener('click', function () {
     eventsSec.scrollIntoView({ behavior: "smooth" });
 });
 
-window.onload = function() {
-    window.scrollTo(0, 0);
-};
+
 // Function to check if an element is in the viewport
 function isInViewport(element) {
     const rect = element.getBoundingClientRect();
