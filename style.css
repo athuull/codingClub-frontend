@@ -404,18 +404,20 @@ footer {
     margin-bottom: 20px;
 }
 
+/* Media query for screens with a maximum width of 768px (typical for small screens) */
 @media (max-width: 768px) {
-    /* Modify the image container for smaller screens */
+    /* Remove the grid layout for smaller screens */
     .image-container {
-        grid-template-columns: repeat(2, 1fr); /* Two columns per row on smaller screens */
-        gap: 10px; /* Decrease spacing between images */
+        display: block; /* Display images as block elements */
     }
 
     /* Make images responsive within the image container */
     .image-container img {
         width: 100%; /* Set the image width to 100% to make them responsive */
         max-height: none; /* Remove the maximum height to allow images to scale proportionally */
+        margin-bottom: 10px; /* Add margin to separate images vertically */
     }
 }
+
 
 
