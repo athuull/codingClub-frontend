@@ -404,6 +404,18 @@ footer {
     margin-bottom: 20px;
 }
 
-/* CSS for scaling animation */
+@media (max-width: 768px) {
+    /* Modify the image container for smaller screens */
+    .image-container {
+        grid-template-columns: repeat(2, 1fr); /* Two columns per row on smaller screens */
+        gap: 10px; /* Decrease spacing between images */
+    }
+
+    /* Make images responsive within the image container */
+    .image-container img {
+        width: 100%; /* Set the image width to 100% to make them responsive */
+        max-height: none; /* Remove the maximum height to allow images to scale proportionally */
+    }
+}
 
 
