@@ -470,3 +470,88 @@ footer {
         font-size: 20px;
     }
 }
+
+
+
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .wrapper {
+        padding: 20px; /* Add some padding for smaller screens */
+    }
+
+    #loginForm {
+        width: 100%; /* Make the form full width for smaller screens */
+    }
+}
+
+/* Existing CSS styles */
+
+/* Center the wrapper */
+.wrapper.centered-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Vertically center within the viewport */
+    flex-direction: column;
+    font-size: 24px; /* Increase font size */
+}
+
+/* Add border radius to the input boxes */
+/* Update the input-box style to use flexbox */
+.input-box {
+    display: flex;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7); /* Slightly transparent dark background */
+    border-radius: 10px; /* Add border radius */
+    margin: 10px 0;
+    font-size: 18px; /* Increase font size */
+}
+
+/* Style for input elements within input-box */
+.input-box input {
+    flex: 1; /* Allow input to grow and take up remaining space */
+    padding: 15px;
+    border: none;
+    background-color: transparent; /* Make input background transparent */
+    color: #fff;
+    font-size: inherit; /* Inherit font size from parent */
+    outline: none;
+}
+
+/* Style for the icons */
+.input-box i {
+    padding: 0 10px; /* Add padding to separate icon from input */
+    font-size: 20px; /* Adjust icon size as needed */
+}
+
+.wrapper h1{
+    text-align: center;
+    font-size: 50px;
+}
+
+.btnLogin {
+    text-align: center; /* Center the content horizontally */
+}
+
+/* Style for the login button */
+.btnLogin button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #6020d7; /* Custom button background color */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 30px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    box-shadow: none;
+}
+
+#alertCred{
+    font-size: 25px;
+    color:red;
+    text-align: center;
+}

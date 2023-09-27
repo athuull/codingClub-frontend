@@ -152,6 +152,9 @@ loginForm.addEventListener('submit', (e) => {
     signInWithEmailAndPassword(auth, email, password)
         .then((cred) => {
             console.log('the user logged in:', cred.user); // Log user details
+            window.location.href = 'index.html';
+            
+            
             
         })
         .catch((err) => {
@@ -159,6 +162,7 @@ loginForm.addEventListener('submit', (e) => {
             console.log(errorMessage);
             if(errorMessage==='auth/invalid-email'){
                 alertEmail.classList.remove('hidden');
+                
 
             }
             else if(errorMessage==='auth/invalid-login-credentials'){
