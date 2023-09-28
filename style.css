@@ -59,7 +59,21 @@ section {
     padding: 60px 0;
     font-size: 30px;
     border-radius: 30px;
+    background-image: url(images/background.jpg);
+    background-position: center center;
+    background-size:cover;
 }
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 30px 0; /* Adjust padding for smaller screens */
+        font-size: 24px; /* Adjust font size for smaller screens */
+        background-size: contain; /* Ensure the entire image fits within the container */
+    }
+}
+
+
+
 
 /* Style for the "Join Now" button */
 /* Updated style for the "Join Now" button with a custom color */
