@@ -30,8 +30,7 @@ const contactBtn = document.querySelector('.contactNav');
 const contactSec = document.getElementById('contact');
 const eventsBtn = document.querySelector('.eventsNav');
 const eventsSec = document.getElementById('events');
-// const cursor = document.getElementById('blinking-cursor');
-// const typingText = document.getElementById('typing-text');
+
 const alertEmail = document.querySelector('.alertEmail');
 const alertPassword = document.querySelector('.alertPassword');
 const alertNewEmail = document.querySelector('.alertNewEmail');
@@ -61,15 +60,19 @@ window.addEventListener('click', (event) => {
 });
 aboutBtn.addEventListener('click', function () {
     aboutSec.scrollIntoView({ behavior: "smooth" });
+    handleScroll(); // Trigger the animation
 });
 
 contactBtn.addEventListener('click', function () {
     contactSec.scrollIntoView({ behavior: "smooth" });
+    handleScroll(); // Trigger the animation
 });
 
 eventsBtn.addEventListener('click', function () {
     eventsSec.scrollIntoView({ behavior: "smooth" });
+    handleScroll(); // Trigger the animation
 });
+
 
 
 // Function to check if an element is in the viewport
