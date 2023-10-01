@@ -30,7 +30,6 @@ const contactBtn = document.querySelector('.contactNav');
 const contactSec = document.getElementById('contact');
 const eventsBtn = document.querySelector('.eventsNav');
 const eventsSec = document.getElementById('events');
-
 const alertEmail = document.querySelector('.alertEmail');
 const alertPassword = document.querySelector('.alertPassword');
 const alertNewEmail = document.querySelector('.alertNewEmail');
