@@ -1,0 +1,586 @@
+/* Reset some default styles */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Basic styling */
+body {
+    font-family: 'Open Sans' , sans-serif;
+    background-color: #0d1117; /* Dark background */
+    color: #fff; /* White text color */
+    background-size: cover;
+
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.715); /* Slightly transparent dark header */
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between; /* Create space between logo and navigation */
+    align-items: center; /* Center logo and navigation vertically */
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 10px; /* Adjust the font size as needed */
+    margin-left: 20px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+     ;
+}
+
+nav a:hover {
+    color: #6020d7;
+}
+
+section {
+    padding: 20px;
+}
+
+.hero {
+    text-align: center;
+    background-image: url(images/background.jpg);
+    background-position: center center;
+    background-size: cover;
+    position: relative; /* Make sure the ::before pseudo-element is positioned relative to this element */
+    border-radius: 30px;
+    padding: 60px 0;
+    color: #fff;
+    font-size: 30px;
+}
+
+/* Create a semi-transparent overlay */
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust the alpha value to control darkness */
+    border-radius: inherit; /* Inherit the border-radius from the parent element */
+    pointer-events: none; /* Allow clicks to pass through the overlay */
+}
+
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 30px 0; /* Adjust padding for smaller screens */
+        font-size: 24px; /* Adjust font size for smaller screens */
+        background-size:cover; /* Ensure the entire image fits within the container */
+    }
+}
+
+
+
+
+/* Style for the "Join Now" button */
+/* Updated style for the "Join Now" button with a custom color */
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #6020d7; /* Custom button background color */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 30px;
+    margin-top: 20px;
+    transition: 0.3s ease-in-out, transform 0.2s ease-in-out;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    box-shadow: none;
+    z-index: 1;
+}
+
+.btn:hover {
+    background-color: #490db9; /* Darker color on hover */
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+ul {
+    list-style: none;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 715); /* Slightly transparent dark footer */
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.welcome-message {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh; /* Center vertically in the viewport */
+    flex-direction: column;
+    
+}
+
+#typing-text{
+    animation-name: fade-in;
+    animation-duration: 3s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    pointer-events: none;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* Style for the login modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background overlay */
+    z-index: 1;
+}
+
+.modal-content {
+    background-color: #252424;
+    margin: 15% auto;
+    padding: 20px;
+    width: 50%;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    position: relative;
+    border-radius:30px;
+    
+    
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.logo img {
+    width: 150px;
+    height: auto;
+}
+
+.intro-hero {
+    font-size: 30px;
+        animation-name: fade-in;
+        animation-duration: 3s;
+        animation-delay: 1s;
+        animation-fill-mode: forwards;
+        opacity: 0;
+        pointer-events: none;
+    }
+    
+    @keyframes fade-in {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+
+@media (max-width: 768px) {
+    .hero {
+        font-size: 18px; /* Decrease font size for smaller screens */
+        padding: 20px 0; /* Decrease padding for top and bottom */
+    }
+    .logo img {
+        width: 100px;
+        height: auto;
+    }
+
+    nav ul {
+        justify-content: flex-end;
+    }
+
+    nav ul li {
+        margin-left: 10px;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+    
+    header {
+        padding-right: 0rem;
+    }
+    
+    .welcome-message {
+        height: 30vh; /* Adjust the height for smaller screens */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin:30px 30px;
+    }
+    
+    .intro-hero {
+        font-size: 24px; /* Adjust font size for smaller screens */
+    }
+}
+
+
+/* CSS for the About Us, Events, Contact Us, and Members cards */
+.card {
+    background-color: rgba(0, 0, 0, 0.7); /* Slightly transparent dark background */
+    color: #fff;
+    padding: 40px; /* Increase padding to make the cards taller */
+    border-radius: 20px; /* Rounded corners for a boxy look */
+    margin: 0 20px 20px 20px; /* Match the left and right margins of the hero section */
+    text-align:center;
+}
+
+.card h2 {
+    font-size: 30px; /* Increase font size for larger text */
+    color:rgba(136, 0, 255, 0.633);
+}
+
+.card p {
+    font-size: 18px; /* Increase font size for larger text */
+}
+/* CSS for fade-in animation */
+.fade-in-left {
+    opacity: 0;
+    transform: translateX(-20px); /* Start off-screen to the left */
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.fade-in-left.fade-in-visible {
+    opacity: 1;
+    transform: translateX(0); /* Move to the original position */
+}
+
+/* Styling for the login/signup buttons */
+.tab-button {
+    background-color: #6020d7; /* Custom button background color */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    box-shadow: none;
+    padding: 10px 20px;
+    margin-right: 10px;
+}
+
+/* Smaller button size for the small class */
+.btn-small {
+    font-size: 14px;
+    padding: 8px 16px;
+}
+
+/* Active tab styling */
+.tab-button.active {
+    background-color: #490db9; /* Darker color for active tab */
+}
+
+/* Style for the close button */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.hidden{
+    display:none
+}
+.resources{
+    overflow:hidden;
+}
+
+.modalAlerts{
+    color:red;
+    font-size: 1.5rem;
+}
+
+/* Styling for the Getting Started, Bi-weekly Updates, and Community Interaction sections */
+.mainContent{
+    background-color: rgba(0, 0, 0, 0.7); /* Slightly transparent dark background */
+    color: #fff;
+    padding: 40px;
+    border-radius: 20px;
+    margin: 20px;
+    text-align: left;
+    position: relative; /* Add relative positioning for animations */
+    overflow: hidden; /* Hide content that overflows */
+    font-size: large;
+  
+}
+
+
+.mainContent h2 {
+    font-size: 30px; /* Increase font size for larger text */
+    color: rgba(136, 0, 255, 0.633);
+}
+.mainContent p{
+    font-size: 25px;
+}
+.mainContent li{
+    font-size: 20px;
+}
+/* Default styles for larger screens */
+.video-container {
+    text-align: center;
+}
+
+/* Media query for screens with a maximum width of 768px (typical for small screens) */
+@media (max-width: 768px) {
+    .video-container {
+        display: flex;
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Center vertically */
+    }
+}
+
+
+.event-details {
+    text-align: center;
+    margin: 20px 0;
+}
+.event-details h2{
+    text-align: center;
+}
+
+.event-details h3 {
+    font-size: 24px;
+    text-align: left;
+}
+
+.image-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three columns per row */
+    gap: 20px; /* Adjust spacing between images */
+    justify-content: center; /* Center images horizontally */
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #000000;
+    border-radius: 5px;
+}
+
+/* Existing CSS styles */
+
+#gallery-header {
+    margin-bottom: 20px;
+}
+
+/* Media query for screens with a maximum width of 768px (typical for small screens) */
+@media (max-width: 768px) {
+    /* Remove the grid layout for smaller screens */
+    .image-container {
+        display: block; /* Display images as block elements */
+    }
+
+    /* Make images responsive within the image container */
+    .image-container img {
+        width: 100%; /* Set the image width to 100% to make them responsive */
+        max-height: none; /* Remove the maximum height to allow images to scale proportionally */
+        margin-bottom: 10px; /* Add margin to separate images vertically */
+    }
+}
+
+.headingNotes {
+    text-align: center;
+}
+
+/* Add margin to the left of "Semester 1" */
+#semester {
+    margin-left: 20px;
+}
+
+/* Style for the subjects list */
+#semester ul {
+    list-style: none;
+}
+
+.notesContainer {
+    margin-bottom: 10px;
+    text-align: left;
+    gap: 10px;
+    padding:20px;
+}
+
+.headingNotes h1{
+    text-align: center;
+    color: #6020d7;
+    font-size: 30px;
+    
+}
+
+#semester h2{
+    color:#fff;
+    text-align: left;
+    font-size: 24px;
+}
+
+#library-header{
+    margin-bottom: 20px;
+}
+
+.notesContainer ul li {
+    font-size: 25px;
+    margin: 10px;
+}
+
+.module-list {
+    list-style-type: none;
+    padding-left: 20px; /* Adjust the indentation as needed */
+}
+
+.module-list .modules {
+    font-weight: normal; /* Remove bold for modules */
+    margin-top: 5px; /* Add some spacing between modules */
+}
+.subject-list {
+    list-style-type: none;
+    padding-left: 0; /* Remove default padding */
+}
+
+.subject-list li {
+    font-weight: bold; /* Make subject names bold */
+    margin-top: 10px; /* Add some spacing between subjects */
+}
+
+@media (max-width: 768px) {
+    .module-list .modules {
+        font-weight: normal; /* Remove bold for modules */
+        margin-top: 5px; /* Add some spacing between modules */
+        font-size: 18px;
+    }
+    .subject-list {
+        list-style-type: none;
+        padding-left: 0; /* Remove default padding */
+    }
+    
+    .subject-list li {
+        font-weight: bold; /* Make subject names bold */
+        margin-top: 10px;
+        font-size: 20px;
+    }
+}
+
+
+
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .wrapper {
+        padding: 20px; /* Add some padding for smaller screens */
+    }
+
+    #loginForm {
+        width: 100%; /* Make the form full width for smaller screens */
+    }
+}
+
+/* Existing CSS styles */
+
+/* Center the wrapper */
+.wrapper.centered-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Vertically center within the viewport */
+    flex-direction: column;
+    font-size: 24px; /* Increase font size */
+}
+
+/* Add border radius to the input boxes */
+/* Update the input-box style to use flexbox */
+.input-box {
+    display: flex;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7); /* Slightly transparent dark background */
+    border-radius: 10px; /* Add border radius */
+    margin: 10px 0;
+    font-size: 18px; /* Increase font size */
+}
+
+/* Style for input elements within input-box */
+.input-box input {
+    flex: 1; /* Allow input to grow and take up remaining space */
+    padding: 15px;
+    border: none;
+    background-color: transparent; /* Make input background transparent */
+    color: #fff;
+    font-size: inherit; /* Inherit font size from parent */
+    outline: none;
+}
+
+/* Style for the icons */
+.input-box i {
+    padding: 0 10px; /* Add padding to separate icon from input */
+    font-size: 20px; /* Adjust icon size as needed */
+}
+
+.wrapper h1{
+    text-align: center;
+    font-size: 50px;
+}
+
+.btnLogin {
+    text-align: center; /* Center the content horizontally */
+}
+
+/* Style for the login button */
+.btnLogin button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #6020d7; /* Custom button background color */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 30px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    box-shadow: none;
+}
+
+#alertCred{
+    font-size: 25px;
+    color:red;
+    text-align: center;
+}
