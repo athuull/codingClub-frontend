@@ -3,7 +3,7 @@
 <head>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto+Mono:wght@300;400&display=swap');
-        </style>
+    </style>
         
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,7 +23,7 @@
 <li><a class="eventsNav">Events</a></li>
 <li><a class="contactNav">Contact</a></li>
 <li><a class="galleryNav" href="gallery.html">Gallery</a></li>
-<li><a class="resourcesNav hidden" href="library.html">Library</a></li>
+<li><a class="resourcesNav" href="library.html">Library</a></li>
 </ul>
 </nav>
 <button id="logoutBtn" class="btn btn-small hidden">Logout</button>
@@ -36,8 +36,7 @@
 <p class = "intro-hero">Department of Computer Applications</p>
 <button id="join-now-btn" class="btn">Login</button>
 
-<!-- ... (previous HTML code) ... -->
-
+<!-- Login Modal -->
 <div id="login-modal" class="modal">
     <div class="modal-content">
         <span class="close" id="close-modal">&times;</span>
@@ -65,20 +64,15 @@
                 <input type="password" id="new-password" name="new-password" required>
                 <br>
                 <p class="alertNewEmail hidden modalAlerts ">Invalid Email</p>
-                
                 <button type="submit" class="btn btn-small">Sign Up</button>
             </form>
         </div>
     </div>
 </div>
 
-<!-- ... (remaining HTML code) ... -->
-
-
-
-
 </div>
 </section>
+
 <section id="getting-started" class="mainContent fade-in-left">
     <h2>Getting Started</h2>
     <br><br>
@@ -102,6 +96,7 @@
         <li><strong>Fun Activities:</strong> Engaging coding challenges, projects, and even coding-related games to keep things exciting.</li>
     </ul>
 </section>
+
 <section id="community-interaction" class="mainContent fade-in-left">
     <h2>Community Interaction</h2>
     <br><br>
@@ -112,56 +107,43 @@
         <li>Participate in coding competitions and hackathons organized by our club.</li>
     </ul>
 </section>
-<section id="tutorials" class="mainContent fade-in-left">
-    <h2>Tutorials</h2>
-    <br><br>
-    <p>Everyone can learn to code! Get started with this free Harvard Course where you'll learn the fundamentals of coding. </p>
-    <br>
-    <div class="video-container">
-    <iframe
-        width="560"
-        height="315"
-        src="https://www.youtube.com/embed/8mAITcNt710?si=Oc9v7H5Ayh_Z_B4a&enablejsapi=1"
-        title="YouTube video player"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen
-    ></iframe></div>
-    <br><br>
-
-    
-</section>
-<br><br><br><br><br>
 
 <section id="about" class = "card fade-in-left">
-<h2>About Us</h2>
-<p>We are the pioneering Coding Club at Rajagiri Viswajyothi College of Arts and Applied Sciences, proudly representing the first BCA batch. Our mission is to foster a passion for coding and technology among students.</p>
+    <h2>About Us</h2>
+    <p>We are the pioneering Coding Club at Rajagiri Viswajyothi College of Arts and Applied Sciences, proudly representing the first BCA batch. Our mission is to foster a passion for coding and technology among students.</p>
     <p>At our club, we explore, learn, and code together to unlock the endless possibilities of the digital world. Join us on our journey of innovation and creativity!</p>
 </section>
+
 <section id="events" class="card fade-in-left">
-<h2>Upcoming Events</h2>
-<ul>
-<li>
-<h3>Hacker's Day Programme</h3>
-<p>Date: September 29 2023</p>
-
-</li>
-
+    <h2>Upcoming Events</h2>
+    <ul>
+        <li>
+            <h3>Tech Fest</h3>
+            <p>Date: March 10, 2024</p>
+            <p>Description: A tech-focused event where experts discuss the latest trends in technology, coding, and AI. Don't miss it!</p>
+        </li>
+        <li>
+            <h3>Hackathons</h3>
+            <p>Date: April 2024</p>
+            <p>Description: Our annual hackathon brings together coders, designers, and innovators to build impactful projects in just 24 hours.</p>
+        </li>
+        <li>
+            <h3>Coding Competitions</h3>
+            <p>Date: June 2024</p>
+            <p>Description: Test your coding skills in our fun yet challenging coding competitions. Amazing prizes await the winners!</p>
+        </li>
+    </ul>
 </section>
 
-
-
-</section>
 <section id="contact" class="card fade-in-left">
-<h2>Contact Us</h2>
-<p>If you have any questions or want to join our club, feel free to contact us at <a
-href="mailto:xyz@gmail.com">codingclub@rajagiriviswajyothi.org</a>.</p>
+    <h2>Contact Us</h2>
+    <p>If you have any questions or want to join our club, feel free to contact us at <a href="mailto:xyz@gmail.com">codingclub@rajagiriviswajyothi.org</a>.</p>
 </section>
 
 <footer>
-<p>&copy; 2023 Coding Club - RVCAS</p>
+    <p>&copy; 2024 Coding Club - RVCAS</p>
 </footer>
 
 <script src ="dist/bundle.js"></script>
 </body>
-</html>
+</html

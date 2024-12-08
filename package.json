@@ -1,7 +1,6 @@
 {
   "name": "codingclubwebsite",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -11,8 +10,15 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "firebase": "^10.4.0",
-    "webpack": "^5.88.2",
-    "webpack-cli": "^5.1.4"
+    "firebase": "^10.4.0"
+  },
+  "description": "",
+  "devDependencies": {
+    "@babel/core": "^7.26.0",
+    "@babel/preset-env": "^7.26.0",
+    "babel-loader": "^9.2.1",
+    "webpack": "^5.97.1",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.1.0"
   }
 }
